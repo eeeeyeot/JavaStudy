@@ -8,10 +8,9 @@ public class ACMHotel_10250
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int n = Integer.parseInt(br.readLine());
+		int t = Integer.parseInt(br.readLine());
 		
-		for(int i = 0; i < n; i++) {
-			
+		for(int i = 0; i < t; i++) {
 		}
 	}
 }
