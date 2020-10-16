@@ -11,8 +11,6 @@ public class Turret
 		for(int i = 0; i < n; i++) 
 		{
 			//1.원이 두 점에서 만나는 경우
-			//(|x1 - x2|, |y1 - y2|)
-			
 			
 			//2.원이 외접하는 경우
 			

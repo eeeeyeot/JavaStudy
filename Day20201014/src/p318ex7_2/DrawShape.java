@@ -36,7 +36,7 @@ class Point{
 		this(0, 0);
 	}
 	String getXY() {
-		return "("+x+","+y+")";
+		return "(" + x + "," + y + ")";
 	}
 }
 
