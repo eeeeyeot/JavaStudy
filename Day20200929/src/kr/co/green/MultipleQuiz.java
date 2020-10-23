@@ -7,21 +7,17 @@ public class MultipleQuiz
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-		
-		String[] numbers = new String[2];
-		
-		for(int i = 0 ; i < numbers.length; i++) {
-			numbers[i] = sc.next();
+
+		int	num1	= Integer.parseInt(sc.next());
+		String num2 = sc.next();
+
+		for (int i = num2.length() - 1; i >= 0; i--)
+		{
+			System.out.println((num2.charAt(i) - '0') * num1);
 		}
 		
-		int num1 = Integer.parseInt(numbers[0]);
-		String[] snum2 = numbers[1].split("");
-		
-		for(int i = snum2.length - 1 ; i >= 0; i--) {
-			System.out.println(Integer.parseInt(snum2[i]) * num1);
-		}
-		System.out.println(Integer.parseInt(numbers[0]) * Integer.parseInt(numbers[1]));
-		
+		System.out.println(num1 * Integer.parseInt(num2));
+
 		sc.close();
 	}
 }

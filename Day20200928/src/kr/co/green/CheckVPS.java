@@ -9,35 +9,28 @@ public class CheckVPS
 	{
 		Scanner		sc		= new Scanner(System.in);
 
-		int			n		= sc.nextInt();
-		int[]		cnt		= new int[n];
-		String[]	s_vps	= new String[n];
-		String[]	sarr	= null;
-		for (int i = 0; i < n; i++)
+		int			T		= sc.nextInt();
+		String[]	sArr	= null;
+		
+		for (int i = 0; i < T; i++)
 		{
-			s_vps[i] = sc.next();
-			if (s_vps[i].length() < 2 || s_vps[i].length() > 50)
-				System.exit(0);
-			sarr = s_vps[i].split("");
+			int cnt = 0;
+			sArr = sc.next().trim().split("");
 
-			for (int j = 0; j < sarr.length; j++)
+			for (int j = 0; j < sArr.length; j++)
 			{
-				if (sarr[j].equals("(")) {
-					cnt[i]++;
-					if(cnt[i] < 0)
-						cnt[i] = -999;
+				if (sArr[j].equals("(")) {
+					cnt++;
 				}
-				else if (sarr[j].equals(")")) {
-					cnt[i]--;
-					if(cnt[i] < 0)
-						cnt[i] = -999;
+				else if (sArr[j].equals(")")) {
+					cnt--;
+					if(cnt < 0) {
+						break;
+					}
 				}
 			}
-		}
-
-		for (int i = 0; i < cnt.length; i++)
-		{
-			if (cnt[i] != 0 || cnt[i] < 0)
+			
+			if (cnt != 0)
 				System.out.println("NO");
 			else
 				System.out.println("YES");

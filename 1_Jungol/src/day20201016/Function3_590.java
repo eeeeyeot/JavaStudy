@@ -9,6 +9,7 @@ public class Function3_590
 	{
 		Scanner sc = new Scanner(System.in);
 		
+		@SuppressWarnings("unused")
 		int n = sc.nextInt();
 		
 		sc.close();

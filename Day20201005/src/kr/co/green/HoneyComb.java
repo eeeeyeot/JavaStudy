@@ -18,7 +18,7 @@ public class HoneyComb
 		{
 			while (i <= n)
 			{
-				i += 6*k++;
+				i += 6 * k++;
 			}
 			System.out.println(k);
 		}
@@ -27,3 +27,9 @@ public class HoneyComb
 	}
 
 }
+//Layer1
+//2~7
+//Layer2
+//8~19
+//Layer3
+//20~37
