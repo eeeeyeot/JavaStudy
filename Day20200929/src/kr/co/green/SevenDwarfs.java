@@ -11,14 +11,15 @@ public class SevenDwarfs
 		int sum = 0;
 		int[] num = new int[9];
 		
+		//input
 		for(int i = 0; i < 9; i++) {
 			num[i] = sc.nextInt();
 			sum += num[i];
 		}
-		
+
+		//find data
 		int num1 = 0, num2 = 0;
-		
-		for(int i = 0; i < num.length; i++) {
+		for(int i = 0; i < num.length - 1; i++) {
 			for(int j = i + 1; j < num.length; j++) {
 				if(sum - (num[i] + num[j]) == 100) {
 					num1 = num[i];
@@ -27,11 +28,11 @@ public class SevenDwarfs
 					break;
 				}
 			}
-			
 			if(num1 != 0 || num2 != 0)
 				break;
 		}
 		
+		//print
 		for(int i = 0; i < num.length; i++) {
 			if(num[i] != num1 && num[i] != num2)
 				System.out.println(num[i]);

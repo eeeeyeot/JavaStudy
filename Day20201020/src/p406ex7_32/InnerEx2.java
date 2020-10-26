@@ -10,6 +10,7 @@ public class InnerEx2
 	//static 멤버 간에는 서로 직접 접근이 가능
 	static StaticInner cv = new StaticInner();
 	
+	@SuppressWarnings("unused")
 	static void staticMethod() {
 		//static멤버는 인스턴스 멤버에 직접 접근할 수 없다.
 		//InstanceInner obj1 = new InstanceInner();
@@ -21,6 +22,7 @@ public class InnerEx2
 		InstanceInner obj1 = outer.new InstanceInner();
 	}
 	
+	@SuppressWarnings("unused")
 	void instanceMethod() {
 		//인스턴스 메서드에서는 인스턴스 멤버와 static 멤버 모두 접근 가능
 		InstanceInner obj1 = new InstanceInner();
@@ -29,6 +31,7 @@ public class InnerEx2
 		//LocalInner lv = new LocalInner();
 	}
 	
+	@SuppressWarnings("unused")
 	void myMethod() {
 		class LocalInner {}
 		LocalInner lv = new LocalInner();

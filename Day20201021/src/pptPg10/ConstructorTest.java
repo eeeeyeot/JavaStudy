@@ -14,6 +14,7 @@ class Child extends Parent{
 
 public class ConstructorTest
 {
+	@SuppressWarnings("unused")
 	public static void main(String[] args)
 	{
 		Child c = new Child();
