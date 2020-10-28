@@ -1,3 +1,4 @@
+package day20201028;
 import java.util.Scanner;
 
 public class SpinningQueue
@@ -10,7 +11,13 @@ public class SpinningQueue
 		int		N		= sc.nextInt();
 		int		M		= sc.nextInt();
 		int[]	num		= new int[M];
-
+		
+		if(N == 1 && M == 1) {
+			System.out.println(0);
+			sc.close();
+			return;
+		}
+		
 		if (N > 0 && N <= 50)
 		{
 			if (M > 0 && M <= N)
