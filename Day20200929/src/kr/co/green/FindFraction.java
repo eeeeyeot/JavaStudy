@@ -14,7 +14,6 @@ public class FindFraction
 		int i = 0, j = 0;
 		boolean reverse = false;
 		
-		
 		while(cnt != input) {
 			if(i == 0 && j == 0) {
 				j++;
@@ -22,12 +21,15 @@ public class FindFraction
 				continue;
 			}
 			
+			//끝에 도달시
 			if(i - 1 < 0 || j - 1 < 0) {
 				reverse = !reverse;
+				//위쪽 끝일 때 한 칸 오른쪽으로
 				if(j > 1 && i == 0) {
 					j++;
 					cnt++;
 				}
+				//왼쪽 끝일 때 한 칸 아래로
 				else if(i > 0 && j == 0) {
 					i++;
 					cnt++;
@@ -37,6 +39,7 @@ public class FindFraction
 					break;
 			}
 			
+			//진행 방향으로 증가
 			if(reverse) {
 				j--;
 				i++;
@@ -51,8 +54,6 @@ public class FindFraction
 		
 		System.out.println((i + 1) + "/" + (j + 1));
 		
-		
 		sc.close();
 	}
-
 }

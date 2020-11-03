@@ -1,6 +1,6 @@
 package day20201019;
 
-public class Loop_548
+public class Loop2_548
 {
 	public static void main(String[] args)
 	{

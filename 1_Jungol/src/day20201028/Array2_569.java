@@ -15,7 +15,7 @@ public class Array2_569
 				sum += sc.nextInt();
 			}
 			
-			if((double)sum / 4 >= 80) {
+			if(sum / 4 >= 80) {
 				System.out.println("pass");
 				cnt++;
 			}
