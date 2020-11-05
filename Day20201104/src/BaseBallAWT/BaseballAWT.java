@@ -19,7 +19,7 @@ class GameManager extends WindowAdapter{
 	Panel northPanel = new Panel();
 	Panel southPanel = new Panel(); 
 	TextField[] tf = new TextField[3];
-	TextField answerText = new TextField();
+	TextArea answerText = new TextArea();
 	Button checkButton = new Button("check Answer");
 	
 	int[] answer = new int[3];
@@ -81,37 +81,50 @@ class GameManager extends WindowAdapter{
 			return;
 		}
 		printResult();
+		clearTextField();
 	}
 	
 	void reset() {
 		strike = 0;
 		ball = 0;
+		
+	}
+	
+	void clearTextField() {
+		for(int i = 0; i < user.length; i++) {
+			tf[i].setText("");
+		}
 	}
 	
 	void printResult() {
-		answerText.setText("");
+		
+		for(int i = 0; i < user.length; i++) {
+			answerText.append(user[i] + " ");
+		}
+		answerText.append("\n");
+		
 		if(strike != 0) 
 		{
 			System.out.print(strike + " strike   ");
-			answerText.setText(strike + " strike   ");
+			answerText.append(strike + " strike   ");
 		}
 		if(ball != 0)
 		{
 			System.out.print(ball + " ball");
-			answerText.setText(answerText.getText() + ball + " ball");
+			answerText.append(ball + " ball");
 		}
 		
 		if(strike == 0 && ball == 0) {
 			System.out.print("None...");
-			answerText.setText("None...");
+			answerText.append("None...");
 		}
-		
+		answerText.append("\n");
 		System.out.println();
 	}
 	
 	void userWin() {
 		System.out.println("User Win!");
-		answerText.setText("User Win!");
+		answerText.append("User Win!");
 	}
 	
 	boolean checkCorrect() {
