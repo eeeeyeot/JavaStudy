@@ -2,6 +2,7 @@ package ex9_10;
 
 public class ClassEx1
 {
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) throws Exception
 	{
 		Card c = new Card("HEART", 3);
