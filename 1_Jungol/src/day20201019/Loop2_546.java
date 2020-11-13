@@ -16,7 +16,7 @@ public class Loop2_546
 		}
 		
 		System.out.printf("avg : %.1f\n", (double)sum / n);
-		if((double)sum / n >= 80)
+		if(sum / n >= 80)
 			System.out.println("pass");
 		else
 			System.out.println("fail");
