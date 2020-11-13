@@ -7,6 +7,7 @@ public class ClassEx1
 		Card c = new Card("HEART", 3);
 		Card c2 = Card.class.newInstance();
 		
+		@SuppressWarnings("rawtypes")
 		Class cObj = c.getClass();
 		
 		System.out.println(c);
