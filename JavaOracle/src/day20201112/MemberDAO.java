@@ -55,7 +55,7 @@ public class MemberDAO
 		}
 		catch(Exception e)
 		{
-			e.getStackTrace();
+			e.printStackTrace();
 		}
 	}
 }
