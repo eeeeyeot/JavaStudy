@@ -1,16 +1,16 @@
-package ppt10;
+package Java5_ppt10;
 
 public class ThreadEx {
 	public static void main(String[] args) {
 		Thread mainThread = Thread.currentThread();
-		System.out.println("ÇÁ·Î±×·¥ ½ÃÀÛ ½º·¹µå ÀÌ¸§ : " + mainThread.getName());
+		System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ : " + mainThread.getName());
 		
 		ThreadA thA = new ThreadA();
-		System.out.println("ÀÛ¾÷ ½º·¹µåÀÇ ÀÌ¸§ : " + thA.getName());
+		System.out.println("ï¿½Û¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ : " + thA.getName());
 		thA.start();
 		
 		ThreadB thB = new ThreadB();
-		System.out.println("ÀÛ¾÷ ½º·¹µåÀÇ ÀÌ¸§ : " + thB.getName());
+		System.out.println("ï¿½Û¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ : " + thB.getName());
 		thB.start();
 	}
 }
@@ -22,7 +22,7 @@ class ThreadA extends Thread{
 	 
 	 public void run() {
 		 for(int i = 0; i < 2; i++) {
-			 System.out.println(getName() + "°¡ Ãâ·ÂÇÑ ³»¿ë");
+			 System.out.println(getName() + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		 }
 	 }
 }
@@ -30,7 +30,7 @@ class ThreadA extends Thread{
 class ThreadB extends Thread{
 	public void run() {
 		for(int i = 0; i < 2; i++) {
-			System.out.println(getName() + "°¡ Ãâ·ÂÇÑ ³»¿ë");
+			System.out.println(getName() + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		}
 	}
 }

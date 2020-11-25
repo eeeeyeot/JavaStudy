@@ -1,4 +1,4 @@
-package day20201022;
+package day20201023;
 
 import java.util.Scanner;
 
@@ -10,6 +10,7 @@ public class String2_611
 		String	s	= sc.next();
 		String s1 	= "";
 		boolean hasDot = false;
+		
 		for (int i = 0; i < s.length(); i++)
 		{
 			if(s.charAt(i) == '.' && !hasDot) {

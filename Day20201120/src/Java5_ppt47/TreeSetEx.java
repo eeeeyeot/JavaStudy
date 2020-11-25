@@ -1,4 +1,4 @@
-package Java5_ppt42;
+package Java5_ppt47;
 
 import java.util.TreeSet;
 
@@ -15,26 +15,26 @@ public class TreeSetEx {
 		Integer score = null;
 		
 		score = scores.first();
-		System.out.println("°¡Àå ³·Àº Á¡¼ö : " + score);
+		System.out.println("ê°€ì¥ ë‚®ì€ ì ìˆ˜ : " + score);
 		
 		score = scores.last();
-		System.out.println("°¡Àå ³ôÀº Á¡¼ö : " + score);
+		System.out.println("ê°€ì¥ ë†’ì€ ì ìˆ˜ : " + score);
 		
 		score = scores.lower(new Integer(95));
-		System.out.println("95Á¡ ¾Æ·¡ Á¡¼ö : " + score);
+		System.out.println("95ì  ì•„ë˜ ì ìˆ˜ : " + score);
 		
 		score = scores.higher(new Integer(95));
-		System.out.println("95Á¡ À§ Á¡¼ö : " + score);
+		System.out.println("95ì  ìœ„ ì ìˆ˜ : " + score);
 		
 		score = scores.floor(new Integer(95));
-		System.out.println("95Á¡ ÀÌ°Å³ª ¹Ù·Î ¾Æ·¡ Á¡¼ö : " + score);
+		System.out.println("95ì  ì´ê±°ë‚˜ ë°”ë¡œ ì•„ë˜ ì ìˆ˜ : " + score);
 		
 		score = scores.ceiling(new Integer(85));
-		System.out.println("85Á¡ ÀÌ°Å³ª ¹Ù·Î À§ÀÇ Á¡¼ö : " + score + "\n");
+		System.out.println("85ì  ì´ê±°ë‚˜ ë°”ë¡œ ìœ„ì˜ ì ìˆ˜ : " + score + "\n");
 		
 		while(!scores.isEmpty()) {
 			score = scores.pollFirst();
-			System.out.println(score + "(³²Àº °´Ã¼ ¼ö : " + scores.size() + ")");
+			System.out.println(score + "(ë‚¨ì€ ê°ì²´ ìˆ˜ : " + scores.size() + ")");
 		}
 		
 	}
