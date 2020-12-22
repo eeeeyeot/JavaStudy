@@ -1,25 +1,21 @@
 package day20201022;
 
-import java.util.Scanner;
+import java.io.*;
 
 public class String2_612
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		
-		String str = "";
+		sb.append(br.readLine().replaceAll(" ", ""));
 		
-		for(int i = 0; i < 5; i++) {
-			str += sc.next();
-		}
-		
-		for(int i = 0; i < str.length(); i++) {
-			System.out.print(str.charAt(i));
+		for(int i = 0; i < sb.length(); i++) {
+			System.out.print(sb.charAt(i));
+			
 			if((i + 1) % 3 == 0)
 				System.out.println();
 		}
-		
-		sc.close();
 	}
 }
